@@ -23,12 +23,12 @@ async fn main() -> Result<()> {
     let client = ChatGPT::new(config.openai_api_key)?;
 
     // Sending a message and getting the completion
-    println!("Prompt: {}", args[1..args.len()].join(" "));
+    // println!("Prompt: {}", args[1..args.len()].join(" "));
     let response: CompletionResponse = client
        .send_message(args[1..args.len()].join(" "))
        .await?;
 
-    println!("Response: {}", response.message().content);
+    println!("{}", response.message().content);
 
     Ok(())
 }
