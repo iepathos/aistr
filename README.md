@@ -10,7 +10,6 @@ ChatBotCLI
 Requires a config.yml 
 
 ```
----
 openai_api_key: "sk-example-api-key"
 ```
 
